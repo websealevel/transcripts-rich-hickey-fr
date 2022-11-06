@@ -29,7 +29,11 @@ Le héros de cette présentation est Alfred North Whitehead, c'est le type cél�
 
 >Seek simplicity, and distrust it (Recherche la simplicité, et méfie en toi)
 
-La première chose est de se méfier de la simplicité.
+La première chose est de se méfier de la simplicité. Je ne parle pas ici de la complexité des problèmes que nous essayons de résoudre. Nous savons tous qu'on nous donne des problèmes de plus en complexes à résoudre, des problèmes toujours plus gros, avec toujours plus de données, pour lesquels la solution doit être de plus en plus flexible. Les gens vont toujours attendre davantage des logiciels. 
+
+La complexité dont je veux parler aujourd'hui est la complexité *circonstancielle*, la complexité qui naît de la manière dont nos outils, et les idées incarnées par ces outils, fonctionnent ou ne fonctionnent pas. Ces choses deviennent des problèmes que nous devons résoudre et vous avez un nombre limité d'heures par jour, et vous devez résoudre des problèmes. Est ce que ces problèmes à résoudre sont des problèmes du domaine d'application ou ceux que vous avez érigé vous même en choisissant tel outil, tel langage particulier ou telle stratégie de développement ? C'est ça la complexité circonstancielle, elle monte toujours à bord, elle ne fait pas partie du problème que vous essayez de résoudre.
+
+[5:35](https://youtu.be/E4RarTAZ2AY?t=335)
 
 ## Source
 
