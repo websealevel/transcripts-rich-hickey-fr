@@ -1,4 +1,4 @@
-# Est-ce déjà la fin ? Une déconstruction de la perception du temps en tant qu'*objet*
+# Traduction et transcription de la conférence *Est-ce déjà la fin ? Une déconstruction de la perception du temps en tant qu'objet* de Rich Hickey
 
 titre original : Are We There Yet ?
 
@@ -45,3 +45,10 @@ La complexité dont je veux parler aujourd'hui est la complexité *circonstancie
 ## Sources
 
 - [Are we there yet ?](https://www.youtube.com/watch?v=E4RarTAZ2AY&t=3299s), enregistrée en 2009, au Sun JVM Languages Submit, filmé en partenariat avec InfoQ.com
+
+
+
+## Auteur
+
+Paul Schuhmacher
+contact: contact@pschuhmacher.com
