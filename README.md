@@ -1,5 +1,19 @@
 # transcripts-rich-hickey-fr
 
+## Projet
+
+Le but de ce projet est de traduire et retranscrire plusieurs conférences de Rich Hickey dans le but de les publier sous forme de pages web. Les conférences sont protégées, il n'est pas envisageable de les publier sous la forme d'un livre (cf échanges avec Alex Miller).
+
+La sélection se fera sur le choix de certains themes
+
+## Sous-titrage
+
+Une collection de version sous-titrées pourra aussi être envisagée.
+
+## Format
+
+Le texte sera écrit en Markdown et publié en Docbook en PDF.
+
 #### Liste des conférences
 
 - [The language of the system](https://www.youtube.com/watch?v=ROor6_NGIWU)
