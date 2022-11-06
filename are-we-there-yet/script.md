@@ -23,9 +23,9 @@ Quand nous regardons les langages et que nous nous disons "ah, si je pouvais éc
 
 Je vais donc parler aujourd'hui d'un petit sous-ensemble de choses auxquelles vous devriez penser quand vous regardez le langage que vous utilisez, et que vous vous demandez si vous ne pouvez pas faire autrement.
 
-Je veux parler de complexité et de temps, surtout de la notion de temps. Enfin, je veux parler de modèles que nous pouvons utiliser pour mieux implémenter le temps et de certains des principes sur lesquels reposent l'orienté objet. C'est une manière de modéliser, basé sur le fait que nous pouvons faire des choses similaires dans nos programmes à ce que nous faisons, voyons dans le monde, et que ça nous aide à comprendre nos programmes.
+Je veux parler de complexité et de temps, surtout de la notion de temps. Enfin, je veux parler de modèles que nous pouvons utiliser pour mieux implémenter le temps et de certains des principes sur lesquels reposent l'orienté objet. L'orienté objet est une manière de modéliser, basé sur l'idée que nous pouvons faire des choses similaires dans nos programmes à ce que nous faisons, voyons dans la vraie vie, et que ça nous aide à comprendre nos programmes.
 
-Le héros de cette présentation est Alfred North Whitehead, c'est le type célèbre qui avec Russel à écrit Principa Mathematica. Par la suite, il est dévenu philosophe et il a écrit des super trucs et je vais en citer quelques passages, car ils sont tops. 
+Le héros de cette présentation est [Alfred North Whitehead](https://fr.wikipedia.org/wiki/Alfred_North_Whitehead), c'est le type célèbre qui avec [Russel](https://fr.wikipedia.org/wiki/Bertrand_Russell) à écrit [Principa Mathematica](https://fr.wikipedia.org/wiki/Principia_Mathematica). Par la suite, il est dévenu philosophe et il a écrit des super trucs et je vais en citer quelques passages, car ils sont tops. 
 
 >Seek simplicity, and distrust it (Recherche la simplicité, et méfie en toi)
 
@@ -35,6 +35,6 @@ La complexité dont je veux parler aujourd'hui est la complexité *circonstancie
 
 [5:35](https://youtu.be/E4RarTAZ2AY?t=335)
 
-## Source
+## Sources
 
 - [Are we there yet ?](https://www.youtube.com/watch?v=E4RarTAZ2AY&t=3299s), enregistrée en 2009, au Sun JVM Languages Submit, filmé en partenariat avec InfoQ.com
