@@ -1,7 +1,8 @@
-# Sommes nous arrivés au bout ? Une déconstruction de la perception du temps en tant qu'*objet*
+# Est-ce déjà la fin ? Une déconstruction de la perception du temps en tant qu'*objet*
 
 titre original : Are We There Yet ?
-traductions possibles : Y serons nous bientôt ? Y sommes-nous arrivés ? Avons nous atteind notre but ?
+
+traductions possibles : Avons nous atteint notre but ? Est-ce déjà la fin de l'histoire ? Est-ce déjà la fin ? Sommes nous arrivés au bout ?
 
 ## Début du script
 
