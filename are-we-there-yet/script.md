@@ -1,6 +1,6 @@
-# Traduction et transcription de la conférence *Est-ce déjà la fin ? Une déconstruction de la perception du temps en tant qu'objet* de Rich Hickey
+# Traduction et transcription de la conférence *Est-ce déjà la fin ? Une déconstruction du temps en orienté objet* de Rich Hickey
 
-Titre original : Are We There Yet ?
+Titre original : Are We There Yet ? A deconstruction of object-oriented time.
 
 [Lien vers la conférence](https://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey/)
 
