@@ -8,4 +8,4 @@
 
 ## Ressources
 
-- [conférence](https://www.youtube.com/watch?v=ScEPu1cs4l0&t=1s)
+- [Source](https://www.youtube.com/watch?v=ScEPu1cs4l0&t=1s)
