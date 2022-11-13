@@ -10,7 +10,7 @@ Version: 1.0
 
 Date dernière mise à jour:
 
-## *Est-ce déjà la fin ? Une déconstruction de la perception du temps en tant qu'objet* de Rich Hickey
+## *Est-ce déjà la fin ? Une déconstruction du temps en orienté objet* de Rich Hickey
 
 Je vais parler du *temps* aujourd'hui. Plus particluièrement, de comment on gère le temps dans les langages orienté objet en général et peut-être de comment nous échouons à le faire.
 
