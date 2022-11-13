@@ -2,7 +2,7 @@
 
 ## Script
 
-- [script](script.md)
+- [script](transcript-fr.md)
 
 ## Notes
 
