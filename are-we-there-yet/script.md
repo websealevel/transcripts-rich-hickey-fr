@@ -50,13 +50,19 @@ La première chose est de se méfier de la simplicité. Je ne parle pas ici de l
 <!-- <img src="assets/slide07.png" width="300px"> -->
 
 
-La complexité dont je veux parler aujourd'hui est la complexité *circonstancielle*, la complexité qui naît de la manière dont nos outils, et les idées incarnées par ces outils, fonctionnent ou ne fonctionnent pas. Ces choses deviennent des problèmes que nous devons résoudre et vous avez un nombre limité d'heures par jour, et vous devez résoudre des problèmes. Est ce que ces problèmes à résoudre sont des problèmes du domaine d'application ou ceux que vous avez érigé vous même en choisissant tel outil, tel langage particulier ou telle stratégie de développement ? C'est ça la complexité circonstancielle, elle monte toujours à bord, elle ne fait pas partie du problème que vous essayez de résoudre.
+La complexité dont je veux parler aujourd'hui est la *complexité circonstancielle* _(NDLR *incidental complexity* en anglais)_, la complexité qui naît de la manière dont nos outils, et les idées incarnées par ces outils, fonctionnent ou ne fonctionnent pas. Ces choses deviennent des problèmes que nous devons résoudre et vous avez un nombre limité d'heures par jour, et vous devez résoudre des problèmes. Est ce que ces problèmes à résoudre sont des problèmes du domaine d'application ou ceux que vous avez érigé vous même en choisissant tel outil, tel langage particulier ou telle stratégie de développement ? C'est ça la complexité circonstancielle, elle monte toujours à bord, elle ne fait pas partie du problème que vous essayez de résoudre. 
+
+Et c'est la pire je pense, on ne sait jamais quand on fait quelque chose de complexe, il n'y a pas un truc qui apparait soudainement et s'exclame "Arrg, complexe !", qui vous pousse à vous dire "Oh, d'accord je vois la complexité, elle est effrayante, je sais que je viens d'entrer dans une zone dangereuse, je dois rester prudent là dessus." La complexité circonstancielle la plus terrible, c'est celle qui prend l'apparence de la *simplicité*. "Regarde comment c'est facile, il n'y a pas de points-virgules etc.". Je ne dis pas ça pour critiquer les points-virgules, c'est juste quelque chose qui m'incite à regarder des aspects superficiels du langage que j'utilise, qui me pousse à me dire "ça à l'air simple, ça m'est familier" (*NDLR ici Rich Hickey ne semble pas vouloir aborder la distinction entre la simplicité et la facilité, un thème qu'il va approfondir de manière très pertinente dans sa conférence [Simple made Easy](https://www.youtube.com/watch?v=kGlVcSMgtV4)*). La question est de savoir est-ce que derrière ces apparences se cache une complexité circonstancielle ?
+
+Voici un exemple (NDLR Rich Hickey présente des exemples de syntaxe, concept issus du C++), et je le répète, je ne cherche pas à critiquer gratuitement le C++ mais j'ai passé plus d'une décennie à en faire... Bon, ce n'est pas si difficile, si vous êtes versé dans la [métaprogrammation avec des patrons](https://fr.wikipedia.org/wiki/M%C3%A9taprogrammation_avec_des_patrons) ça peut devenir difficile, mais les bases sont plutôt simples: vous pouvez écrire une fonction, elle retourne un pointeur. Qu'est ce qui ne va pas avec ça ? C'est plutôt évident, il y a `new` et `delete` _(NDLR new et delete sont des opérateurs de la librairie standard qui permettent d'allouer et de désallouer de la mémoire en C++)_, des pointeurs que vous pouvez faire circuler dans votre programme, les déférencer _(NDLR accèder à la valeur stockée à l'adresse mémoire stockée par le pointeur)_, etc. Vous avez besoin de connaître cinq choses, vous pouvez les apprendre en une après-midi etc. Mais pour autant, est-ce *vraiment simple* ?
+
 
 [5:35](https://youtu.be/E4RarTAZ2AY?t=335)
 
-## Sources
+## Bibliographie
 
-- [Are we there yet ?](https://www.youtube.com/watch?v=E4RarTAZ2AY&t=3299s), enregistrée en 2009, au Sun JVM Languages Submit, filmé en partenariat avec InfoQ.com
+- [Are we there yet ?](https://www.youtube.com/watch?v=E4RarTAZ2AY&t=3299s), enregistrée en 2009, au Sun JVM Languages Submit, filmé en partenariat avec InfoQ.com. La source de cette transcription.
+- [Simple made Easy](https://www.youtube.com/watch?v=kGlVcSMgtV4), enregistrée en 2011, mise à disposition par InfoQ.com
 
 
 ## Auteur
