@@ -112,9 +112,9 @@ La raison c'est que la plupart des langages orientés objet sont nés à une ép
 
 ## Bibliographie
 
-- [Are we there yet ?](https://www.youtube.com/watch?v=E4RarTAZ2AY&t=3299s), enregistrée en 2009, au Sun JVM Languages Submit, filmée en partenariat avec [InfoQ.com](https://www.infoq.com/). La source de cette transcription.
+- Source: [Are we there yet ?](https://www.youtube.com/watch?v=E4RarTAZ2AY&t=3299s), enregistrée en 2009, au Sun JVM Languages Submit, filmée en partenariat avec [InfoQ.com](https://www.infoq.com/)
 - [Simple made Easy](https://www.youtube.com/watch?v=kGlVcSMgtV4), enregistrée en 2011, mise à disposition par [InfoQ.com](https://www.infoq.com/)
-- [The value of values [vostfr]](https://www.youtube.com/watch?v=VJi1vOwu2SM)
+- [The Value of Values [vostfr]](https://www.youtube.com/watch?v=VJi1vOwu2SM)
 
 ## Auteur
 
