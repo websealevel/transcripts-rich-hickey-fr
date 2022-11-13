@@ -1,10 +1,16 @@
 # Traduction et transcription de la conférence *Est-ce déjà la fin ? Une déconstruction de la perception du temps en tant qu'objet* de Rich Hickey
 
-titre original : Are We There Yet ?
+Titre original : Are We There Yet ?
 
-traductions possibles : Avons nous atteint notre but ? Est-ce déjà la fin de l'histoire ? Est-ce déjà la fin ? Sommes nous arrivés au bout ?
+[Lien vers la conférence](https://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey/)
 
-## Début du script
+<!-- traductions possibles : Avons nous atteint notre but ? Est-ce déjà la fin de l'histoire ? Est-ce déjà la fin ? Sommes nous arrivés au bout ? -->
+
+Version: 1.0
+
+Date dernière mise à jour:
+
+## *Est-ce déjà la fin ? Une déconstruction de la perception du temps en tant qu'objet* de Rich Hickey
 
 Je vais parler du *temps* aujourd'hui. Plus particluièrement, de comment on gère le temps dans les langages orienté objet en général et peut-être de comment nous échouons à le faire.
 
@@ -52,7 +58,12 @@ La première chose est de se méfier de la simplicité. Je ne parle pas ici de l
 
 La complexité dont je veux parler aujourd'hui est la *complexité circonstancielle* _(NDLR *incidental complexity* en anglais)_, la complexité qui naît de la manière dont nos outils, et les idées incarnées par ces outils, fonctionnent ou ne fonctionnent pas. Ces choses deviennent des problèmes que nous devons résoudre et vous avez un nombre limité d'heures par jour, et vous devez résoudre des problèmes. Est ce que ces problèmes à résoudre sont des problèmes du domaine d'application ou ceux que vous avez érigé vous même en choisissant tel outil, tel langage particulier ou telle stratégie de développement ? C'est ça la complexité circonstancielle, elle monte toujours à bord, elle ne fait pas partie du problème que vous essayez de résoudre. 
 
-Et c'est la pire je pense, on ne sait jamais quand on fait quelque chose de complexe, il n'y a pas un truc qui apparait soudainement et s'exclame "Arrg, complexe !", qui vous pousse à vous dire "Oh, d'accord je vois la complexité, elle est effrayante, je sais que je viens d'entrer dans une zone dangereuse, je dois rester prudent là dessus." La complexité circonstancielle la plus terrible, c'est celle qui prend l'apparence de la *simplicité*. "Regarde comment c'est facile, il n'y a pas de points-virgules etc.". Je ne dis pas ça pour critiquer les points-virgules, c'est juste quelque chose qui m'incite à regarder des aspects superficiels du langage que j'utilise, qui me pousse à me dire "ça à l'air simple, ça m'est familier" (*NDLR ici Rich Hickey ne semble pas vouloir aborder la distinction entre la simplicité et la facilité, un thème qu'il va approfondir dans sa conférence [Simple made Easy](https://www.youtube.com/watch?v=kGlVcSMgtV4)*). La question est de savoir est-ce que *derrière ces apparences* se cache une complexité circonstancielle ?
+<!-- [5:35](https://youtu.be/E4RarTAZ2AY?t=335) -->
+
+>La complexité circonstancielle la plus redoutable, c'est celle qui revêt l'apparence de la *simplicité*
+
+
+Et c'est la pire je pense, on ne sait jamais quand on fait quelque chose de complexe, il n'y a pas un truc qui apparait soudainement et s'exclame "Arrg, complexe !", qui vous pousse à vous dire "Oh, d'accord je vois la complexité, elle est effrayante, je sais que je viens d'entrer dans une zone dangereuse, je dois rester prudent là dessus." La complexité circonstancielle la plus redoutable, c'est celle qui revêt l'apparence de la *simplicité*. "Regarde comment c'est facile, il n'y a pas de points-virgules etc.". Je ne dis pas ça pour critiquer les points-virgules, c'est juste quelque chose qui m'incite à regarder des aspects superficiels du langage que j'utilise, qui me pousse à me dire "ça à l'air simple, ça m'est familier" (*NDLR ici Rich Hickey ne semble pas vouloir aborder la distinction entre la simplicité et la facilité, un thème qu'il va approfondir dans sa conférence [Simple made Easy](https://www.youtube.com/watch?v=kGlVcSMgtV4)*). La question est de savoir est-ce que *derrière ces apparences* se cache une complexité circonstancielle ?
 
 Prenons un exemple _(NDLR un exemple tiré du C++)_
 
@@ -62,18 +73,24 @@ Foo *bar(...){...}; //quel est le problème ?
 
 et je le répète, je ne cherche pas à critiquer gratuitement le C++ mais j'ai passé plus d'une décennie à en faire... Bon, ce n'est pas si difficile, si vous êtes versé dans la [métaprogrammation avec des patrons](https://fr.wikipedia.org/wiki/M%C3%A9taprogrammation_avec_des_patrons) ça peut devenir difficile, mais les bases sont plutôt simples: vous pouvez écrire une fonction, elle retourne un pointeur. Qu'est ce qui ne va pas avec ça ? Parce que c'est plutôt simple: il y a `new` et `delete` _(NDLR new et delete sont des opérateurs de la librairie standard qui permettent d'allouer et de désallouer de la mémoire en C++)_, des pointeurs que vous pouvez faire circuler dans votre programme, les déférencer _(NDLR accèder à la valeur stockée à l'adresse mémoire stockée par le pointeur)_, etc. Vous avez besoin de connaître cinq choses au plus et vous pouvez les apprendre en une après-midi. 
 
-Mais pour autant, est-ce *vraiment simple* ? Par exemple, la même syntaxe est utilisée pour les pointeurs qui font référence à des choses sur le [tas](https://fr.wikipedia.org/wiki/Tas_(allocation_dynamique)) et des choses qui ne sont pas sur le tas. Mais ça devient pire 
+Mais pour autant, est-ce *vraiment simple* ? Par exemple, la même syntaxe est utilisée pour les pointeurs qui font référence à des choses sur le [tas](https://fr.wikipedia.org/wiki/Tas_(allocation_dynamique)) et des choses qui ne sont pas sur le tas. Mais il y a pire, le vrai problème qui réside dans la signature de cette fonction c'est qu'est ce que vous faites du résultat qu'elle vous renvoie ? Est-ce que ça vous appartient ? En êtes vous responsable à présent ? Devez vous libérer la mémoire plus tard vous même _(NDLR utiliser l'opérateur `delete`)_ ? Est-ce quelque chose dont la mémoire peut être libérée ? Pouvez-vous le passer à quelqu'un d'autre ? Es-ce autorisé ? Pouvez vous l'enregistrer ? Le problème ici c'est qu'il n'y a pas de de gestion standardisée et automatique de la mémoire. Il n'y a pas de [ramasse-miettes](https://fr.wikipedia.org/wiki/Ramasse-miettes_(informatique)). Et pour celleux qui utilisent ce langage, ce problème était (et l'est toujours) une grande source de complexité circonstancielle. Car *vous* devez gérer la mémoire. Et vous ne le voyez pas immédiatement, il n'y pas un panneau dans l'en tête de votre code source qui vous avertit "N'oubliez pas qu'il est de votre responsabilité de gérer la mémoire!". C'est de la complexité circonstancielle, vous *devez le savoir*, ce n'est pas écrit dans le code source. 
+
+Je pense d'ailleurs que l'absence de ramasse-miettes a sérieusement entravé un des objectifs principaux du C++, à savoir celui d'être un langage de [bibliothèque logicielle](https://fr.wikipedia.org/wiki/Biblioth%C3%A8que_logicielle) *(NDLR library language dans le texte)*. Toutes les intentions initiales du langage, toutes les interventions de [Stroustrup](https://fr.wikipedia.org/wiki/Bjarne_Stroustrup) (NDLR Bjarne Stroustrup est l'auteur du C++) etc., soulignent cette volonté du C++ de devenir un langage de bibliothèqe logicielle mais il a fini seulement par devenir un langage de bibliothèque étriqué. Car chacun dispose de sa propre bibliothèque, mais il n'existe toujours pas beaucoup de bibliothèques partagées entre différents acteurs à cause de ce problème. Et nous savons que Java, qui dispose d'un ramasse-miettes standard, a réussi à créer une grande infrastructure de bibliothèque logicielle. Je pense que ce qui a incité beaucoup de gens à migrer de C++ vers Java, en grande partie, est de ne plus avoir à porter le fardeau de cette complexité. "Je ne veux plus faire de gestion de mémoire manuelle, cela ne fait pas partie du problème que j'essaie de résoudre. C'est juste un problème de plus, qui m'est resservi jour après jour, dès que je me remets au travail. Et je n'en veux plus." 
 
 
-[5:35](https://youtu.be/E4RarTAZ2AY?t=335)
+
+
 
 ## Bibliographie
 
-- [Are we there yet ?](https://www.youtube.com/watch?v=E4RarTAZ2AY&t=3299s), enregistrée en 2009, au Sun JVM Languages Submit, filmé en partenariat avec InfoQ.com. La source de cette transcription.
-- [Simple made Easy](https://www.youtube.com/watch?v=kGlVcSMgtV4), enregistrée en 2011, mise à disposition par InfoQ.com
+- [Are we there yet ?](https://www.youtube.com/watch?v=E4RarTAZ2AY&t=3299s), enregistrée en 2009, au Sun JVM Languages Submit, filmée en partenariat avec [InfoQ.com](https://www.infoq.com/). La source de cette transcription.
+- [Simple made Easy](https://www.youtube.com/watch?v=kGlVcSMgtV4), enregistrée en 2011, mise à disposition par [InfoQ.com](https://www.infoq.com/)
 
 
 ## Auteur
 
 Paul Schuhmacher
-contact: contact@pschuhmacher.com
+
+site web: <a href="pschuhmacher.com">pschuhmacher.com</a>
+
+contact: <a href="mailto:contact@pschuhmacher.com">contact@pschuhmacher.com</a>
